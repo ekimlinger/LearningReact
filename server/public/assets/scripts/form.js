@@ -25,7 +25,7 @@ class MyForm extends React.Component {
     super(props);
     this.state = {
       name: '',
-      favColor: 'not-black',
+      favColor: 'aqua',
       fontSize: 15,
       pStyle: {
         color: this.favColor,
@@ -33,11 +33,9 @@ class MyForm extends React.Component {
       }
     };
 
-    this.handleNameChange = this.handleNameChange.bind(this);
     this.handleColorChange = this.handleColorChange.bind(this);
     this.handleFontSizeChange = this.handleFontSizeChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  };
 
   handleNameChange(event) {
     this.setState({name: event.target.value});
@@ -56,6 +54,7 @@ class MyForm extends React.Component {
     alert('Hey, thanks for entering in your name, ' + this.state.name);
     event.preventDefault();
   }
+
 
   render() {
     return (
@@ -86,4 +85,5 @@ class MyForm extends React.Component {
   }
 };
 
-ReactDOM.render(<MyForm />,document.getElementById('container-2'));
+
+ReactDOM.render(<MyForm />, document.getElementById('container-2'));
